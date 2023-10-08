@@ -1,7 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:fluttermvvmtemplate/core/base/state/base_state.dart';
 import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
+import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
+import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
+import 'package:fluttermvvmtemplate/core/init/localization/localization_manager.dart';
 import 'package:fluttermvvmtemplate/view/authenticate/test/viewmodel/test_view_model.dart';
 
 class TestView extends StatefulWidget {
@@ -26,9 +30,23 @@ class _TestViewState extends BaseState<TestView> {
   }
 
   Widget get scaffoldBody => Scaffold(
+        appBar: AppBar(
+          title: textWelcomeWidget(),
+          actions: [iconbuttonChangeTheme()],
+        ),
         floatingActionButton: floatingActionButtonNumberIncrement,
         body: textNumber(),
       );
+
+  Text textWelcomeWidget() => Text(LocaleKeys.welcome.locale);
+
+  IconButton iconbuttonChangeTheme() {
+    return IconButton(
+        onPressed: () {
+          context.setLocale(LocalizationManager.instance.enLocale);
+        },
+        icon: Icon(Icons.change_history_outlined));
+  }
 
   Widget textNumber() => Observer(builder: (context) {
         return Text(viewModel.number.toString());
