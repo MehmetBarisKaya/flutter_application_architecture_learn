@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:fluttermvvmtemplate/core/base/state/base_state.dart';
 import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
+import 'package:fluttermvvmtemplate/core/constants/enums/preferences_keys_enum.dart';
 import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
+import 'package:fluttermvvmtemplate/core/init/cache/locale_manage.dart';
 import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
 import 'package:fluttermvvmtemplate/core/init/localization/localization_manager.dart';
 import 'package:fluttermvvmtemplate/view/authenticate/test/viewmodel/test_view_model.dart';
@@ -31,7 +33,8 @@ class _TestViewState extends BaseState<TestView> {
 
   Widget get scaffoldBody => Scaffold(
         appBar: AppBar(
-          title: textWelcomeWidget(),
+          title: Text(
+              LocaleManager.instance.getStringValue(PreferencesKeys.TOKEN)),
           actions: [iconbuttonChangeTheme()],
         ),
         floatingActionButton: floatingActionButtonNumberIncrement,
