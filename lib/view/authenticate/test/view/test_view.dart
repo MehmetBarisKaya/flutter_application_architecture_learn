@@ -4,6 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:fluttermvvmtemplate/core/base/state/base_state.dart';
 import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
 import 'package:fluttermvvmtemplate/core/constants/enums/preferences_keys_enum.dart';
+import 'package:fluttermvvmtemplate/core/extension/context_extension.dart';
 import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
 import 'package:fluttermvvmtemplate/core/init/cache/locale_manage.dart';
 import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
@@ -32,16 +33,46 @@ class _TestViewState extends BaseState<TestView> {
   }
 
   Widget get scaffoldBody => Scaffold(
-        appBar: AppBar(
-          title: Text(
-              LocaleManager.instance.getStringValue(PreferencesKeys.TOKEN)),
-          actions: [iconbuttonChangeTheme()],
-        ),
+        appBar: appBar(),
         floatingActionButton: floatingActionButtonNumberIncrement,
         body: textNumber(),
       );
 
-  Text textWelcomeWidget() => Text(LocaleKeys.welcome.locale);
+  Widget textNumber() => Column(
+        children: [
+          mailField,
+          Observer(builder: (context) {
+            return Text(viewModel.number.toString());
+          }),
+          ListView(
+            children: [
+              Container(
+                height: context.height * 0.4,
+                color: context.colors.background,
+                child: buildText(),
+              ),
+              Padding(
+                padding: context.paddinMedium,
+                child: Placeholder(),
+              )
+            ],
+          )
+        ],
+      );
+
+  Text buildText() {
+    return Text(
+      "hello",
+      style: context.textTheme.labelSmall,
+    );
+  }
+
+  AppBar appBar() {
+    return AppBar(
+      title: Text(LocaleManager.instance.getStringValue(PreferencesKeys.TOKEN)),
+      actions: [iconbuttonChangeTheme()],
+    );
+  }
 
   IconButton iconbuttonChangeTheme() {
     return IconButton(
@@ -51,9 +82,7 @@ class _TestViewState extends BaseState<TestView> {
         icon: Icon(Icons.change_history_outlined));
   }
 
-  Widget textNumber() => Observer(builder: (context) {
-        return Text(viewModel.number.toString());
-      });
+  Text textWelcomeWidget() => Text(LocaleKeys.welcome.locale);
 
   FloatingActionButton get floatingActionButtonNumberIncrement =>
       FloatingActionButton(
@@ -61,5 +90,12 @@ class _TestViewState extends BaseState<TestView> {
           viewModel.increment();
         },
         child: const Icon(Icons.add),
+      );
+}
+
+extension _FormArea on _TestViewState {
+  TextFormField get mailField => TextFormField(
+        validator: (value) =>
+            value!.contains(RegExp(r"[a-zA-Z]")) ? null : "Email not valid",
       );
 }
