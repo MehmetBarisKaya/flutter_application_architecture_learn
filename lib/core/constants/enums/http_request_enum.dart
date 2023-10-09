@@ -1,0 +1,1 @@
+enum HttpRequestTypes { GET, POST }
