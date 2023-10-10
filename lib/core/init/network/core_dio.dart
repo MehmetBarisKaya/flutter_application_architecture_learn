@@ -19,11 +19,10 @@ class CoreDio with DioMixin implements Dio, ICoreDio {
   }
 
   Future<IResponseModel<R>> fetchData<R, T extends BaseModel>(String path,
-      {dynamic data,
-      Map<String, dynamic>? queryParameters,
-      //Options? options,
-      required T parseModel,
-      required HttpRequestTypes type,
+      {required HttpRequestTypes type,
+      required BaseModel<T> parseModel,
+      dynamic data,
+      Map<String, Object>? queryParameters,
       void Function(int, int)? onReceiveProgress}) async {
     final response = await request(path,
         data: data, options: Options(method: type.rawValue));
@@ -38,12 +37,12 @@ class CoreDio with DioMixin implements Dio, ICoreDio {
     }
   }
 
-  R _responseParser<R>(BaseModel model, dynamic data) {
-    if (data is List) {
-      return data.map((e) => model.fromjson(e)).toList() as R;
-    } else if (data is Map) {
-      return model.fromjson(data as Map<String, Object>) as R;
-    }
-    return data;
-  }
+  // R _responseParser<R>(BaseModel model, dynamic data) {
+  //   if (data is List) {
+  //     return data.map((e) => model.fromjson(e)).toList() as R;
+  //   } else if (data is Map) {
+  //     return model.fromjson(data as Map<String, Object>) as R;
+  //   }
+  //   return data;
+  // }
 }

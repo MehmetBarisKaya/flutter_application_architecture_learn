@@ -34,7 +34,7 @@ class TestModel extends BaseModel with EquatableMixin {
   }
 
   @override
-  fromjson(Map<String, Object> json) {
+  fromJson(Map<String, dynamic> json) {
     return _$TestModelFromJson(json);
   }
 }

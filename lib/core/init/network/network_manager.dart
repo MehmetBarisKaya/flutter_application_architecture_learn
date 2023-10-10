@@ -5,7 +5,7 @@ import 'package:fluttermvvmtemplate/core/init/network/core_dio.dart';
 
 class NetworkManager {
   static NetworkManager? _instance;
-  static NetworkManager get instance {
+  static NetworkManager? get instance {
     _instance ??= NetworkManager._init();
     return _instance!;
   }

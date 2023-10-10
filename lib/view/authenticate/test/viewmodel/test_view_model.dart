@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermvvmtemplate/core/base/model/base_view_model.dart';
 import 'package:fluttermvvmtemplate/core/constants/enums/app_theme_enum.dart';
-import 'package:fluttermvvmtemplate/core/constants/enums/http_request_enum.dart';
 import 'package:fluttermvvmtemplate/core/init/notifier/theme_notifier.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/test/model/test_model.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 part 'test_view_model.g.dart';
@@ -41,14 +39,14 @@ abstract class _TestViewModelBase with Store, BaseViewModel {
   @action
   Future<void> getSampleRequest() async {
     isLoading = true;
-    final response = await coreDio!.fetchData<List<TestModel>, TestModel>('x',
-        type: HttpRequestTypes.GET, parseModel: TestModel());
-    // ignore: unnecessary_type_check
-    if (response is List<TestModel>) {
-      //print true
-    } else {
-      // response.error;
-    }
+    // final response = await coreDio!.fetchData<List<TestModel>, TestModel>('x',
+    //     type: HttpRequestTypes.GET, parseModel: TestModel());
+    // // ignore: unnecessary_type_check
+    // if (response is List<TestModel>) {
+    //   //print true
+    // } else {
+    //   // response.error;
+    // }
     isLoading = false;
   }
 }
