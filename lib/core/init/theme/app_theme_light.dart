@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/constants/app/app_constants.dart';
-import 'package:fluttermvvmtemplate/core/init/theme/app_theme.dart';
-import 'package:fluttermvvmtemplate/core/init/theme/light/light_theme_interface.dart';
+
+import '../../constants/app/app_constants.dart';
+import 'app_theme.dart';
+import 'light/light_theme_interface.dart';
 
 class AppThemeLight extends AppTheme with ILightTheme {
   AppThemeLight._init();
@@ -14,6 +15,14 @@ class AppThemeLight extends AppTheme with ILightTheme {
   ThemeData get theme => ThemeData(
       colorScheme: _appColorScheme,
       fontFamily: ApplicationConstants.FONT_FAMILY,
+      scaffoldBackgroundColor: Color(0xfff1f3f8),
+      inputDecorationTheme: InputDecorationTheme(
+        border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+        enabledBorder:
+            UnderlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+        focusedBorder:
+            UnderlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+      ),
       textTheme: textTheme());
 
   TextTheme textTheme() {
@@ -36,7 +45,7 @@ class AppThemeLight extends AppTheme with ILightTheme {
         onSecondary: Colors.black38,
         onSurface: Colors.white30,
         onBackground: Colors.black12,
-        onError: Colors.red,
+        onError: Color(0xffffc93c),
         brightness: Brightness.light);
   }
 }

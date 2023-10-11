@@ -24,7 +24,7 @@
         "password": "Password",
         "forgotText": "Forgot Password",
         "login": "Login",
-        "dontAccount": "Dont have account"
+        "dontAccount": "Dont have account? "
     },
     "home": {
         "build": {
