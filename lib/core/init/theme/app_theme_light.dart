@@ -12,7 +12,7 @@ class AppThemeLight extends AppTheme with ILightTheme {
   }
 
   ThemeData get theme => ThemeData(
-      colorScheme: _appColorScheme(),
+      colorScheme: _appColorScheme,
       fontFamily: ApplicationConstants.FONT_FAMILY,
       textTheme: textTheme());
 
@@ -25,10 +25,10 @@ class AppThemeLight extends AppTheme with ILightTheme {
     );
   }
 
-  ColorScheme _appColorScheme() {
+  ColorScheme get _appColorScheme {
     return ColorScheme(
         primary: colorSchemeLight.black,
-        secondary: Colors.green,
+        secondary: colorSchemeLight.azure,
         surface: Colors.blue,
         background: Colors.white,
         error: Colors.red[800]!,

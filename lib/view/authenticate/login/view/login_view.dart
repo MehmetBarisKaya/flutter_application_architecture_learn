@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermvvmtemplate/core/base/state/base_state.dart';
 import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
-import 'package:fluttermvvmtemplate/view/_widgets/button/login_button.dart';
+import 'package:fluttermvvmtemplate/view/_product/_widgets/button/login_button.dart';
 import 'package:fluttermvvmtemplate/view/authenticate/login/viewmodel/login_view_model.dart';
 
 class LoginView extends StatefulWidget {

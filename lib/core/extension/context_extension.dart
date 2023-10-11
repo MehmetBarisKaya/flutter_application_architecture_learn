@@ -22,11 +22,28 @@ extension ThemeExtension on BuildContext {
   ColorScheme get colors => theme.colorScheme;
 }
 
-extension PaddingExtension on BuildContext {
+extension PaddingExtensionAll on BuildContext {
   EdgeInsets get paddingLow => EdgeInsets.all(low);
   EdgeInsets get paddingNormal => EdgeInsets.all(normal);
   EdgeInsets get paddinMedium => EdgeInsets.all(medium);
   EdgeInsets get paddingHigh => EdgeInsets.all(high);
+}
+
+extension PaddingExtensionSymetric on BuildContext {
+  EdgeInsets get paddingLowVertical => EdgeInsets.symmetric(vertical: low);
+  EdgeInsets get paddingNormalVertical =>
+      EdgeInsets.symmetric(vertical: normal);
+  EdgeInsets get paddingMediumVertical =>
+      EdgeInsets.symmetric(vertical: medium);
+  EdgeInsets get paddingHeightVertical => EdgeInsets.symmetric(vertical: high);
+
+  EdgeInsets get paddingLowHorizontal => EdgeInsets.symmetric(horizontal: low);
+  EdgeInsets get paddingNormalHorizontal =>
+      EdgeInsets.symmetric(horizontal: normal);
+  EdgeInsets get paddingMediumHorizontal =>
+      EdgeInsets.symmetric(horizontal: medium);
+  EdgeInsets get paddingHeightHorizontal =>
+      EdgeInsets.symmetric(horizontal: high);
 }
 
 extension PageExtension on BuildContext {

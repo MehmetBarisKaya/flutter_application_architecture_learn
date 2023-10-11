@@ -9,3 +9,7 @@ extension StringLocalization on String {
           ? null
           : "Email not valid";
 }
+
+extension ImagePathExtension on String {
+  String get toSVG => "assets/svg/$this.svg";
+}
