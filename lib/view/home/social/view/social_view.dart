@@ -3,8 +3,10 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
 import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
 import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
+import 'package:fluttermvvmtemplate/core/init/network/vexana_manager.dart';
 import 'package:fluttermvvmtemplate/view/_product/_widgets/animation/socail_card_animation.dart';
 import 'package:fluttermvvmtemplate/view/_product/_widgets/listtile/friend_card.dart';
+import 'package:fluttermvvmtemplate/view/home/social/service/social_service.dart';
 import 'package:fluttermvvmtemplate/view/home/social/viewmodel/social_view_model.dart';
 import 'package:kartal/kartal.dart';
 
@@ -13,8 +15,11 @@ class SocialView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState>? scaffoldKey = GlobalKey();
+
     return BaseView<SocialViewModel>(
-      viewModel: SocialViewModel(),
+      viewModel: SocialViewModel(
+          SocialService(VexanaManager.instance.networkManager, scaffoldKey)),
       //onsur
       onModelReady: (model) {
         model.setContext(context);

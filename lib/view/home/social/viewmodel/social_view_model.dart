@@ -4,31 +4,30 @@ import 'package:fluttermvvmtemplate/view/_product/_model/query/user_friend_query
 import 'package:fluttermvvmtemplate/view/_product/_utility/thorottle_helper.dart';
 import 'package:fluttermvvmtemplate/view/home/social/model/social_user_model.dart';
 import 'package:fluttermvvmtemplate/view/home/social/service/ISocialService.dart';
-import 'package:fluttermvvmtemplate/view/home/social/service/social_service.dart';
 import 'package:mobx/mobx.dart';
 part 'social_view_model.g.dart';
 
 class SocialViewModel = _SocialViewModelBase with _$SocialViewModel;
 
 abstract class _SocialViewModelBase with Store, BaseViewModel {
-  late ISocialService _socialService;
-  final GlobalKey<ScaffoldState>? scaffoldKey = GlobalKey();
+  late final ISocialService _socialService;
+
   bool isLazyLoadDataFinished = false;
   String _query = "";
   late ThrottleHelper _throttleHelper;
   int _page = 0;
+  int get page => _page;
   @observable
   List<SocialUser>? socialUserList = [];
   @observable
   bool isLoading = false;
   @observable
   bool isLoadingLazy = false;
-
+  _SocialViewModelBase(this._socialService);
   @override
   void setContext(BuildContext context) => viewModelContext = context;
   @override
   void init() {
-    _socialService = SocialService(vexanaManager!.networkManager, scaffoldKey);
     _throttleHelper = ThrottleHelper();
     _fetchAllUser();
   }

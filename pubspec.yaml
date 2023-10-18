@@ -50,6 +50,7 @@ dependencies:
   vexana: ^3.5.4
   kartal: ^3.4.4
   animations: ^2.0.8
+  mockito: ^5.4.2
 
 dev_dependencies:
   flutter_test:
