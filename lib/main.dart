@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttermvvmtemplate/view/home/social/view/social_view.dart';
 import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
@@ -8,7 +9,6 @@ import 'core/init/navigation/navigation_route.dart';
 import 'core/init/navigation/navigation_service.dart';
 import 'core/init/notifier/provider_list.dart';
 import 'core/init/notifier/theme_notifier.dart';
-import 'view/authenticate/login/view/login_view.dart';
 
 Future<void> main() async {
   await _init();
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
       theme: Provider.of<ThemeNotifier>(context, listen: false).currentTheme,
       navigatorKey: NavigationService.instance.navigatorKey,
       onGenerateRoute: NavigationRoute.instance.generateRoute,
-      home: LoginView(),
+      home: SocialView(),
     );
   }
 }

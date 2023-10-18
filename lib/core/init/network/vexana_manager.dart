@@ -11,5 +11,5 @@ class VexanaManager {
 
   INetworkManager networkManager = NetworkManager<Null>(
       isEnableLogger: true,
-      options: BaseOptions(baseUrl: "https://reqres.in/api/"));
+      options: BaseOptions(baseUrl: "https://jsonplaceholder.typicode.com/"));
 }
