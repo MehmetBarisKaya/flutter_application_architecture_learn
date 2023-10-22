@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:fluttermvvmtemplate/core/base/model/base_error.dart';
-import 'package:fluttermvvmtemplate/core/base/model/base_model.dart';
-import 'package:fluttermvvmtemplate/core/constants/enums/http_request_enum.dart';
-import 'package:fluttermvvmtemplate/core/extension/network_extension.dart';
-import 'package:fluttermvvmtemplate/core/init/network/ICoreDio.dart';
-import 'package:fluttermvvmtemplate/core/init/network/IResponseModel.dart';
+import '../../base/model/base_error.dart';
+import '../../base/model/base_model.dart';
+import '../../constants/enums/http_request_enum.dart';
+import '../../extension/network_extension.dart';
+import 'ICoreDio.dart';
+import 'IResponseModel.dart';
 part "./network_core/core_operations.dart";
 
 class CoreDio with DioMixin implements Dio, ICoreDio {

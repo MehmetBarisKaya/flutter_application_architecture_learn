@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
-import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
-import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
-import 'package:fluttermvvmtemplate/core/init/network/vexana_manager.dart';
-import 'package:fluttermvvmtemplate/view/_product/_widgets/animation/socail_card_animation.dart';
-import 'package:fluttermvvmtemplate/view/_product/_widgets/listtile/friend_card.dart';
-import 'package:fluttermvvmtemplate/view/home/social/service/social_service.dart';
-import 'package:fluttermvvmtemplate/view/home/social/viewmodel/social_view_model.dart';
+import '../../../../core/base/view/base_widget.dart';
+import '../../../../core/extension/string_extension.dart';
+import '../../../../core/init/localization/locale_keys.g.dart';
+import '../../../../core/init/network/vexana_manager.dart';
+import '../../../_product/_widgets/animation/socail_card_animation.dart';
+import '../../../_product/_widgets/listtile/friend_card.dart';
+import '../service/social_service.dart';
+import '../viewmodel/social_view_model.dart';
 import 'package:kartal/kartal.dart';
 
 class SocialView extends StatelessWidget {

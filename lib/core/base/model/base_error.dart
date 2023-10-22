@@ -1,4 +1,4 @@
-import 'package:fluttermvvmtemplate/core/init/network/IResponseModel.dart';
+import '../../init/network/IResponseModel.dart';
 
 class BaseError<T> extends IErrorModel<T> {
   BaseError(this.message);

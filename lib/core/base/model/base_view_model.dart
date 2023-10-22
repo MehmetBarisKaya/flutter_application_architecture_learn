@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/init/cache/locale_manage.dart';
-import 'package:fluttermvvmtemplate/core/init/navigation/navigation_service.dart';
-import 'package:fluttermvvmtemplate/core/init/network/ICoreDio.dart';
-import 'package:fluttermvvmtemplate/core/init/network/network_manager.dart';
-import 'package:fluttermvvmtemplate/core/init/network/vexana_manager.dart';
+import '../../init/cache/locale_manage.dart';
+import '../../init/navigation/navigation_service.dart';
+import '../../init/network/ICoreDio.dart';
+import '../../init/network/network_manager.dart';
+import '../../init/network/vexana_manager.dart';
 
 mixin BaseViewModel {
   late BuildContext viewModelContext;

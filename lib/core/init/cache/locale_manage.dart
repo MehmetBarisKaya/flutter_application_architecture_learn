@@ -1,4 +1,4 @@
-import 'package:fluttermvvmtemplate/core/constants/enums/preferences_keys_enum.dart';
+import '../../constants/enums/preferences_keys_enum.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocaleManager {

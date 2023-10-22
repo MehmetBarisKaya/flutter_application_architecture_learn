@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/base/model/base_view_model.dart';
-import 'package:fluttermvvmtemplate/core/constants/enums/preferences_keys_enum.dart';
-import 'package:fluttermvvmtemplate/core/constants/navigation/navigation_constant.dart';
-import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
-import 'package:fluttermvvmtemplate/view/_product/_constants/image_path_svg.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/onboard/model/onboard_model.dart';
 import 'package:mobx/mobx.dart';
+
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../../core/constants/enums/preferences_keys_enum.dart';
+import '../../../../core/constants/navigation/navigation_constant.dart';
+import '../../../../core/init/localization/locale_keys.g.dart';
+import '../../../_product/_constants/image_path_svg.dart';
+import '../model/onboard_model.dart';
+
 part 'onboard_view_model.g.dart';
 
 class OnboardViewModel = _OnboardViewModelBase with _$OnboardViewModel;

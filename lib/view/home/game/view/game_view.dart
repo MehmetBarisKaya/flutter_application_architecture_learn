@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
-import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
-import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
-import 'package:fluttermvvmtemplate/core/init/network/vexana_manager.dart';
-import 'package:fluttermvvmtemplate/product/widget/button/header_button.dart';
-import 'package:fluttermvvmtemplate/product/widget/grid/game_grid_view.dart';
-import 'package:fluttermvvmtemplate/product/widget/pageview/game_slider.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/game_model.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/game_view_state.dart';
-import 'package:fluttermvvmtemplate/view/home/game/service/game_service.dart';
-import 'package:fluttermvvmtemplate/view/home/game/viewmodel/game_view_model.dart';
 import 'package:kartal/kartal.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../../../core/base/view/base_widget.dart';
+import '../../../../core/extension/string_extension.dart';
+import '../../../../core/init/localization/locale_keys.g.dart';
+import '../../../../core/init/network/vexana_manager.dart';
+import '../../../../product/widget/button/header_button.dart';
+import '../../../../product/widget/grid/game_grid_view.dart';
+import '../../../../product/widget/pageview/game_slider.dart';
+import '../model/game_view_state.dart';
+import '../service/game_service.dart';
+import '../viewmodel/game_view_model.dart';
 
 part './subview/game_view_cards.dart';
 

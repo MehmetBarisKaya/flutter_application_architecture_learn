@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/base/model/base_view_model.dart';
-import 'package:fluttermvvmtemplate/view/_product/_model/query/user_friend_query.dart';
-import 'package:fluttermvvmtemplate/view/_product/_utility/thorottle_helper.dart';
-import 'package:fluttermvvmtemplate/view/home/social/model/social_user_model.dart';
-import 'package:fluttermvvmtemplate/view/home/social/service/ISocialService.dart';
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../_product/_model/query/user_friend_query.dart';
+import '../../../_product/_utility/thorottle_helper.dart';
+import '../model/social_user_model.dart';
+import '../service/ISocialService.dart';
 import 'package:mobx/mobx.dart';
 part 'social_view_model.g.dart';
 

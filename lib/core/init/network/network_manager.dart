@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:fluttermvvmtemplate/core/base/model/base_error.dart';
-import 'package:fluttermvvmtemplate/core/init/network/ICoreDio.dart';
-import 'package:fluttermvvmtemplate/core/init/network/core_dio.dart';
+import '../../base/model/base_error.dart';
+import 'ICoreDio.dart';
+import 'core_dio.dart';
 
 class NetworkManager {
   static NetworkManager? _instance;

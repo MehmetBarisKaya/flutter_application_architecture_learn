@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/components/button/title_text_button.dart';
+
+import '../../../../core/components/button/title_text_button.dart';
 
 class FaceBookButton extends StatelessWidget {
   const FaceBookButton({required this.onComplete, super.key});

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
-import 'package:fluttermvvmtemplate/core/components/text/auto_locale_text.dart';
-import 'package:fluttermvvmtemplate/core/extension/context_extension.dart';
-import 'package:fluttermvvmtemplate/view/_product/_widgets/avatar/onboard_circle.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/onboard/model/onboard_model.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/onboard/viewmodel/onboard_view_model.dart';
+import '../../../../core/base/view/base_widget.dart';
+import '../../../../core/components/text/auto_locale_text.dart';
+import '../../../../core/extension/context_extension.dart';
+import '../../../_product/_widgets/avatar/onboard_circle.dart';
+import '../model/onboard_model.dart';
+import '../viewmodel/onboard_view_model.dart';
 
 class OnBoardView extends StatefulWidget {
   const OnBoardView({Key? key}) : super(key: key);

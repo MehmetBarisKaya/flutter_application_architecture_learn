@@ -1,4 +1,4 @@
-import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
+import '../../../core/extension/string_extension.dart';
 
 class SVGImagePath {
   static SVGImagePath? _instance;

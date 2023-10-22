@@ -1,14 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/view/home/social/view/social_view.dart';
 import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
+import 'core/init/cache/locale_manage.dart';
 import 'core/init/localization/localization_manager.dart';
 import 'core/init/navigation/navigation_route.dart';
 import 'core/init/navigation/navigation_service.dart';
 import 'core/init/notifier/provider_list.dart';
 import 'core/init/notifier/theme_notifier.dart';
+import 'view/home/social/view/social_view.dart';
 
 Future<void> main() async {
   await _init();
@@ -28,6 +29,7 @@ Future<void> main() async {
 Future<void> _init() async {
   //LocaleManager.prefrencesInit();
   WidgetsFlutterBinding.ensureInitialized();
+  await LocaleManager.prefrencesInit();
   await EasyLocalization.ensureInitialized();
 }
 
@@ -42,7 +44,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      theme: Provider.of<ThemeNotifier>(context, listen: false).currentTheme,
+      theme: context.watch<ThemeNotifier>().currentTheme,
       navigatorKey: NavigationService.instance.navigatorKey,
       onGenerateRoute: NavigationRoute.instance.generateRoute,
       home: SocialView(),

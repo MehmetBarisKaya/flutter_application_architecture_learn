@@ -1,9 +1,9 @@
-import 'package:fluttermvvmtemplate/view/_product/_utility/service_helper.dart';
-import 'package:fluttermvvmtemplate/view/_product/enum/network_route_enum.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/game_enums.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/game_model.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/slider_model.dart';
-import 'package:fluttermvvmtemplate/view/home/game/service/IGameService.dart';
+import '../../../_product/_utility/service_helper.dart';
+import '../../../_product/enum/network_route_enum.dart';
+import '../model/game_enums.dart';
+import '../model/game_model.dart';
+import '../model/slider_model.dart';
+import 'IGameService.dart';
 
 import 'package:vexana/vexana.dart';
 

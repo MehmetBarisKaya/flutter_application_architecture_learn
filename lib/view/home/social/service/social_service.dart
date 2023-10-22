@@ -1,8 +1,8 @@
-import 'package:fluttermvvmtemplate/view/_product/_model/query/user_friend_query.dart';
-import 'package:fluttermvvmtemplate/view/_product/_utility/service_helper.dart';
-import 'package:fluttermvvmtemplate/view/_product/enum/network_route_enum.dart';
-import 'package:fluttermvvmtemplate/view/home/social/model/social_user_model.dart';
-import 'package:fluttermvvmtemplate/view/home/social/service/ISocialService.dart';
+import '../../../_product/_model/query/user_friend_query.dart';
+import '../../../_product/_utility/service_helper.dart';
+import '../../../_product/enum/network_route_enum.dart';
+import '../model/social_user_model.dart';
+import 'ISocialService.dart';
 import 'package:vexana/vexana.dart';
 
 class SocialService extends ISocialService with ServiceHelper {

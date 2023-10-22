@@ -1,4 +1,4 @@
-import 'package:fluttermvvmtemplate/core/constants/enums/http_request_enum.dart';
+import '../constants/enums/http_request_enum.dart';
 
 extension NetworkTypeExtension on HttpRequestTypes {
   String get rawValue {

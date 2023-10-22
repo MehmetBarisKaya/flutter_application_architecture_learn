@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/base/model/base_view_model.dart';
-import 'package:fluttermvvmtemplate/core/constants/enums/app_theme_enum.dart';
-import 'package:fluttermvvmtemplate/core/init/notifier/theme_notifier.dart';
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../../core/constants/enums/app_theme_enum.dart';
+import '../../../../core/init/notifier/theme_notifier.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 part 'test_view_model.g.dart';

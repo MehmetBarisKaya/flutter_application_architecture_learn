@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/base/model/base_view_model.dart';
-import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/game_enums.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/game_model.dart';
-import 'package:fluttermvvmtemplate/view/home/game/model/slider_model.dart';
-import 'package:fluttermvvmtemplate/view/home/game/service/game_service.dart';
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../../core/init/localization/locale_keys.g.dart';
+import '../model/game_enums.dart';
+import '../model/game_model.dart';
+import '../model/slider_model.dart';
+import '../service/game_service.dart';
 import 'package:mobx/mobx.dart';
 part 'game_view_model.g.dart';
 

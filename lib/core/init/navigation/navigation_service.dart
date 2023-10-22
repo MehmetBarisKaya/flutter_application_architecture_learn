@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/init/navigation/INaigationService.dart';
+import 'INaigationService.dart';
 
 class NavigationService implements INavigationService {
   NavigationService._init();
