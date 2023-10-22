@@ -1,5 +1,6 @@
-import 'package:fluttermvvmtemplate/core/constants/enums/preferences_keys_enum.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../constants/enums/preferences_keys_enum.dart';
 
 class LocaleManager {
   LocaleManager._init() {
@@ -23,7 +24,7 @@ class LocaleManager {
   Future<void> clearAllSaveFirst() async {
     if (_preferences != null) {
       await _preferences!.clear();
-      //await setBoolValue(LocaleKeys.IS_FIRST_APP, true);
+      await setBoolValue(PreferencesKeys.IS_FIRST_APP, true);
     }
   }
 

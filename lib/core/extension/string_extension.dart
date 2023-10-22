@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fluttermvvmtemplate/core/constants/app/app_constants.dart';
+
+import '../constants/app/app_constants.dart';
 
 extension StringLocalization on String {
   String get locale => this.tr();
@@ -8,4 +9,10 @@ extension StringLocalization on String {
       this.contains(RegExp(ApplicationConstants.EMAIL_REGEX))
           ? null
           : "Email not valid";
+  bool get isValidEmails =>
+      RegExp(ApplicationConstants.EMAIL_REGEX).hasMatch(this);
+}
+
+extension ImagePathExtension on String {
+  String get toSVG => "assets/svg/$this.svg";
 }

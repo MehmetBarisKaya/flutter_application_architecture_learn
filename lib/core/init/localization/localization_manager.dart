@@ -9,5 +9,6 @@ class LocalizationManager {
   }
 
   final Locale enLocale = Locale("en", "US");
-  List<Locale> get supportedLocales => [enLocale];
+  final Locale trLocale = Locale("tr", "TR");
+  List<Locale> get supportedLocales => [enLocale, trLocale];
 }
