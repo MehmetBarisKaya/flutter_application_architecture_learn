@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+
+import '../../../product/exception/navigate_model_not_found.dart';
+import '../../../view/authenticate/onboard/view/onboard_view.dart';
+import '../../../view/authenticate/test/view/test_view.dart';
+import '../../../view/settings/service/setting_web_view.dart';
+import '../../../view/settings/view/subview/setting_web_view.dart';
 import '../../components/card/not_found_navigation_widget.dart';
 import '../../constants/navigation/navigation_constant.dart';
-import '../../../view/authenticate/test/view/test_view.dart';
 
 class NavigationRoute {
   NavigationRoute._init();
@@ -15,7 +20,15 @@ class NavigationRoute {
     switch (args.name) {
       case NavigationConstant.TEST_VIEW:
         return normalNavigate(TestView());
-
+      case NavigationConstant.SETTINGS_WEB_VIEW:
+        if (args.arguments is SettingsWebModel) {
+          return normalNavigate(SettingsWebView(
+            model: args.arguments as SettingsWebModel,
+          ));
+        }
+        throw NavigateException<SettingsWebModel>(args.arguments);
+      case NavigationConstant.ON_BOARD:
+        return normalNavigate(OnBoardView());
       default:
     }
     return MaterialPageRoute(

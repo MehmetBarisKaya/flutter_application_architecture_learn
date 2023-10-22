@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mobx/mobx.dart';
+import 'package:provider/provider.dart';
+
 import '../../../../core/base/model/base_view_model.dart';
 import '../../../../core/constants/enums/app_theme_enum.dart';
 import '../../../../core/init/notifier/theme_notifier.dart';
-import 'package:mobx/mobx.dart';
-import 'package:provider/provider.dart';
+
 part 'test_view_model.g.dart';
 
 class TestViewModel = _TestViewModelBase with _$TestViewModel;
@@ -33,7 +35,7 @@ abstract class _TestViewModelBase with Store, BaseViewModel {
 
   void changeTheme() {
     Provider.of<ThemeNotifier>(viewModelContext, listen: false)
-        .changeTheme(AppThemes.DARK);
+        .changeValue(AppThemes.DARK);
   }
 
   @action

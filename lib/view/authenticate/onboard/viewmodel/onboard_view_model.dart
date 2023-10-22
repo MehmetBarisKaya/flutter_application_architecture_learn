@@ -62,7 +62,10 @@ abstract class _OnboardViewModelBase with Store, BaseViewModel {
     await localeManager?.setBoolValue(PreferencesKeys.IS_FIRST_APP, true);
 
     changeLoading();
-
-    navigation.navigateToPageClear(path: NavigationConstant.TEST_VIEW);
+    if (navigation.navigatorKey.currentState!.canPop()) {
+      navigation.navigatorKey.currentState!.pop();
+    } else {
+      navigation.navigateToPageClear(path: NavigationConstant.TEST_VIEW);
+    }
   }
 }

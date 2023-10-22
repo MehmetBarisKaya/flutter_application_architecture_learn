@@ -53,6 +53,8 @@ dependencies:
   mockito: ^5.4.2
   cached_network_image: ^3.3.0
   shimmer: ^3.0.0
+  webview_flutter: ^4.4.1
+  lottie: ^2.7.0
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +83,7 @@ flutter:
     - assets/lang/
     - assets/svg/
     - assets/image/
+    - assets/lottie/
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

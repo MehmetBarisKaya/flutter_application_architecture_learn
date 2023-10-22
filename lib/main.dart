@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:kartal/kartal.dart';
 import 'package:provider/provider.dart';
 
 import 'core/constants/app/app_constants.dart';
@@ -9,7 +10,7 @@ import 'core/init/navigation/navigation_route.dart';
 import 'core/init/navigation/navigation_service.dart';
 import 'core/init/notifier/provider_list.dart';
 import 'core/init/notifier/theme_notifier.dart';
-import 'view/home/social/view/social_view.dart';
+import 'view/settings/view/setting_view.dart';
 
 Future<void> main() async {
   await _init();
@@ -31,6 +32,7 @@ Future<void> _init() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocaleManager.prefrencesInit();
   await EasyLocalization.ensureInitialized();
+  await DeviceUtility.instance.initPackageInfo();
 }
 
 class MyApp extends StatelessWidget {
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
       theme: context.watch<ThemeNotifier>().currentTheme,
       navigatorKey: NavigationService.instance.navigatorKey,
       onGenerateRoute: NavigationRoute.instance.generateRoute,
-      home: SocialView(),
+      home: SettingsView(),
     );
   }
 }
