@@ -11,5 +11,5 @@ class VexanaManager {
 
   INetworkManager networkManager = NetworkManager<Null>(
       isEnableLogger: true,
-      options: BaseOptions(baseUrl: "https://jsonplaceholder.typicode.com/"));
+      options: BaseOptions(baseUrl: "http://192.168.1.70:3000/"));
 }

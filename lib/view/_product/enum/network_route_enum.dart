@@ -1,10 +1,21 @@
-enum NetworkRoutes { POSTS, LOGIN, BUILD_HOME, FRIENDS, GAME, SLIDER, USERS }
+enum NetworkRoutes {
+  POSTS,
+  LOGIN,
+  BUILD_HOME,
+  FRIENDS,
+  GAME,
+  SLIDER,
+  USERS,
+  BURGER
+}
 
 extension NetwrokRoutesString on NetworkRoutes {
   String get rawValue {
     switch (this) {
       case NetworkRoutes.LOGIN:
         return 'login';
+      case NetworkRoutes.BURGER:
+        return 'burger';
       case NetworkRoutes.POSTS:
         return 'posts';
       case NetworkRoutes.BUILD_HOME:
