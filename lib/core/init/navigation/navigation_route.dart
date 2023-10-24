@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermvvmtemplate/view/authenticate/splash/view/splash_view.dart';
 
 import '../../../product/exception/navigate_model_not_found.dart';
 import '../../../view/authenticate/onboard/view/onboard_view.dart';
@@ -18,6 +19,8 @@ class NavigationRoute {
 
   Route<dynamic>? generateRoute(RouteSettings args) {
     switch (args.name) {
+      case NavigationConstant.DEAFULT:
+        return normalNavigate(SplashView());
       case NavigationConstant.TEST_VIEW:
         return normalNavigate(TestView());
       case NavigationConstant.SETTINGS_WEB_VIEW:

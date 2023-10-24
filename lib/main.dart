@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/view/home/burger/view/burger_view.dart';
 import 'package:kartal/kartal.dart';
 import 'package:provider/provider.dart';
 
@@ -49,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: context.watch<ThemeNotifier>().currentTheme,
       navigatorKey: NavigationService.instance.navigatorKey,
       onGenerateRoute: NavigationRoute.instance.generateRoute,
-      home: BurgerView(),
+      //home: SplashView(),
     );
   }
 }
