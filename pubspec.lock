@@ -33,6 +33,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.8"
+  architecture_theme:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "6b6a8a302db0fcce22f21fdd8b223d7662762710"
+      url: "https://github.com/MehmetBarisKaya/architecture_theme.git"
+    source: git
+    version: "0.0.1"
+  architecture_widgets:
+    dependency: "direct main"
+    description:
+      path: "module/architecture_widgets"
+      relative: true
+    source: path
+    version: "0.0.1"
   archive:
     dependency: transitive
     description:

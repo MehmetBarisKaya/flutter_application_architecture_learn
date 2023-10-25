@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:fluttermvvmtemplate/core/base/view/base_widget.dart';
-import 'package:fluttermvvmtemplate/core/components/slider/range_price_slider.dart';
+import 'package:architecture_widgets/src/slider/range_price_slider.dart';
 import 'package:fluttermvvmtemplate/core/extension/string_extension.dart';
 import 'package:fluttermvvmtemplate/core/init/localization/locale_keys.g.dart';
 import 'package:fluttermvvmtemplate/core/init/network/vexana_manager.dart';
