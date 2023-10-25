@@ -9,6 +9,7 @@ mixin BaseViewModel {
   late BuildContext viewModelContext;
   VexanaManager? vexanaManager = VexanaManager.instance;
   ICoreDio? coreDio = NetworkManager.instance!.coreDio;
+  VexanaManager get VexanaManageComputed => VexanaManager.instance;
   LocaleManager? localeManager = LocaleManager.instance;
   NavigationService navigation = NavigationService.instance;
 
